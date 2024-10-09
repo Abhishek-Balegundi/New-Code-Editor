@@ -2,7 +2,7 @@
   "private": true,
   "name": "theia-ide-product-ext",
   "version": "1.54.0",
-  "description": "Eclipse Theia IDE Product Branding",
+  "description": "SimplifyQA CodeEditor Product Branding",
   "dependencies": {
     "@theia/core": "1.54.0",
     "@theia/getting-started": "1.54.0",
@@ -33,7 +33,6 @@
   "bugs": {
     "url": "https://github.com/eclipse-theia/theia-blueprint/issues"
   },
-  "homepage": "https://github.com/eclipse-theia/theia-blueprint",
   "files": [
     "lib",
     "src"

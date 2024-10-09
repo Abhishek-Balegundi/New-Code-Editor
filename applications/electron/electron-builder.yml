@@ -1,5 +1,5 @@
 appId: eclipse.theia
-productName: TheiaIDE
+productName: SimplifyQA-CodeEditor
 copyright: Copyright © 2020-2023 Eclipse Foundation, Inc
 electronDist: ../../node_modules/electron/dist
 electronVersion: 30.4.0
@@ -20,12 +20,13 @@ files:
   - src-gen
   - lib
   - resources/icons/WindowIcon/512-512.png
-  - resources/TheiaIDESplash.svg
   - scripts
   - "!**node_modules/**"
 extraResources:
   - from: ../../plugins
     to: app/plugins
+  - from: resources/jdk
+    to: app/resources/jdk
 
 win:
   icon: resources/icons/WindowsLauncherIcon/TheiaIDE.ico

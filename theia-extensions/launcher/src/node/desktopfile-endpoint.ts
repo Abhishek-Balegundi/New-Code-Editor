@@ -126,13 +126,13 @@ export class TheiaDesktopFileServiceEndpoint implements BackendApplicationContri
 
     protected getDesktopFileContents(appImagePath: string, imagePath: string): string {
         return `[Desktop Entry]
-Name=Theia IDE
+Name=SimplifyQA CodeEditor
 Exec=${appImagePath} %U
 Terminal=false
 Type=Application
 Icon=${imagePath}
 StartupWMClass=Theia IDE
-Comment=Eclipse Theia IDE product
+Comment=SimplifyQA CodeEditor product
 Categories=Development;`;
     }
 
@@ -145,7 +145,7 @@ Type=Application
 NoDisplay=true
 Icon=${imagePath}
 MimeType=x-scheme-handler/theia;
-Comment=Eclipse Theia IDE product
+Comment=SimplifyQA CodeEditor product
 Categories=Development;`;
     }
 }

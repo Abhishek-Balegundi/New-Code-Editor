@@ -2,7 +2,7 @@
   "private": true,
   "name": "theia-ide-updater-ext",
   "version": "1.54.0",
-  "description": "Eclipse Theia IDE Updater",
+  "description": "SimplifyQA CodeEditor Updater",
   "dependencies": {
     "@theia/core": "1.54.0",
     "@theia/output": "1.54.0",
@@ -34,7 +34,6 @@
   "bugs": {
     "url": "https://github.com/eclipse-theia/theia-blueprint/issues"
   },
-  "homepage": "https://github.com/eclipse-theia/theia-blueprint",
   "files": [
     "lib",
     "src"

@@ -6,7 +6,6 @@
   "version": "1.54.0",
   "license": "MIT",
   "author": "Eclipse Theia <theia-dev@eclipse.org>",
-  "homepage": "https://github.com/eclipse-theia/theia-blueprint#readme",
   "bugs": {
     "url": "https://github.com/eclipse-theia/theia/issues"
   },

@@ -87,7 +87,7 @@ export class TheiaIDEAboutDialog extends AboutDialog {
 
     protected renderTitle(): React.ReactNode {
         return <div className='gs-header'>
-            <h1>Eclipse Theia <span className='gs-blue-header'>IDE</span></h1>
+            <h1>SimplifyQA <span className='gs-blue-header'>CodeEditor</span></h1>
             {this.renderVersion()}
         </div>;
     }
@@ -95,7 +95,8 @@ export class TheiaIDEAboutDialog extends AboutDialog {
     protected renderVersion(): React.ReactNode {
         return <div>
             <p className='gs-sub-header' >
-                {this.applicationInfo ? 'Version ' + this.applicationInfo.version : '-'}
+                {/* {this.applicationInfo ? 'Version ' + this.applicationInfo.version : '-'} */}
+                2.0.0
             </p>
 
             <p className='gs-sub-header' >
