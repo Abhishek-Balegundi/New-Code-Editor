@@ -3,16 +3,15 @@ name: Build, package and test
 on:
   push:
     branches:
-      - master
-  workflow_dispatch:
+      - main
   pull_request:
     branches:
-      - master
+      - main
+  workflow_dispatch:
   schedule:
-    - cron: '0 4 * * *' # Runs every day at 4am: https://docs.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events-schedule
+    - cron: '0 4 * * *' # Runs every day at 4am
 
 jobs:
-
   build:
     name: ${{ matrix.os }}, Node.js v${{ matrix.node }}
 
@@ -29,7 +28,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0 # To fetch all history for all branches and tags. (Will be required for caching with lerna: https://github.com/markuplint/markuplint/pull/111)
+          fetch-depth: 0
 
       - name: Use Node.js ${{ matrix.node }}
         uses: actions/setup-node@v3
@@ -51,7 +50,7 @@ jobs:
           yarn package:applications:preview
         env:
           NODE_OPTIONS: --max_old_space_size=4096
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # https://github.com/microsoft/vscode-ripgrep/issues/9
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Test (Linux)
         if: matrix.tests != 'skip' && runner.os == 'Linux'
