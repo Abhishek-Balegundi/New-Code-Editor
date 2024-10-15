@@ -59,7 +59,7 @@
   "theiaPluginsDir": "plugins",
   "theiaPlugins": {
     "simplifyqa.builtin-brackets":"https://marketplace.visualstudio.com/_apis/public/gallery/publishers/2gua/vsextensions/rainbow-brackets/0.0.6/vspackage",
-    "simplifyqa.builtin-gpt":"https://2657fa71559b7366ed642a2305b5cfe3.r2.cloudflarestorage.com/easyupload/kznbx6_continue-0.9.224.vsix?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=c1da4bcf7c9076d105cb082e4270665b%2F20241008%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20241008T151631Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=16d54c2d1bc23ae8b5df82a63b63043d4b355b079d5da498ba135f6c99b109b1",
+    "simplifyqa.builtin-gpt":"https://2657fa71559b7366ed642a2305b5cfe3.r2.cloudflarestorage.com/easyupload/227klt_continue-0.9.241.vsix?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=c1da4bcf7c9076d105cb082e4270665b%2F20241010%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20241010T093334Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=81a7774e9a1696d4a07c737688098293bf3f27571429d21cc2f7f752032bb13c",
     "vscjava.vscode-java-pack": "https://open-vsx.org/api/vscjava/vscode-java-pack/0.25.11/file/vscjava.vscode-java-pack-0.25.11.vsix",
     "eclipse-theia.builtin-extension-pack": "https://open-vsx.org/api/eclipse-theia/builtin-extension-pack/1.88.1/file/eclipse-theia.builtin-extension-pack-1.88.1.vsix"
   },
