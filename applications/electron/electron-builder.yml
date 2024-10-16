@@ -27,6 +27,8 @@ extraResources:
     to: app/plugins
   - from: resources/jdk
     to: app/resources/jdk
+  - from: resources/maven
+    to: app/resources/maven
 
 win:
   icon: resources/icons/WindowsLauncherIcon/TheiaIDE.ico
