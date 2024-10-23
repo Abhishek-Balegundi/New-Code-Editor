@@ -2,7 +2,11 @@ const fs = require('fs');
 const path = require('path');
 const os = require('os');
 
-const javaPath = path.resolve(__dirname, '../resources/jdk');
+var javaPath = path.resolve(__dirname, '../resources/jdk');
+console.log(process.platform);
+if(process.platform=='darwin'){
+    javaPath = javaPath = path.resolve(__dirname, '../resources/jdk/Contents/Home');
+}
 const settingsPath = path.resolve(os.homedir(), '.theia-ide', 'settings.json');
 
 let settings = {};
