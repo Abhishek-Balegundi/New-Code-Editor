@@ -32,11 +32,15 @@ try {
 
         // Update the java home path
         settings['java.home'] = javaPath;
-
-        // Write the updated settings back to settings.json
-        // eslint-disable-next-line no-null/no-null
-        fs.writeFileSync(settingsPath, JSON.stringify(settings, null, 2), 'utf-8');
     }
+     // Check and set 'files.autoSave' configuration
+     const autoSaveValue = settings['files.autoSave'];
+     if (autoSaveValue !== 'afterDelay') {
+         settings['files.autoSave'] = 'afterDelay';
+     }
+         // Write the updated settings back to settings.json
+         // eslint-disable-next-line no-null/no-null
+         fs.writeFileSync(settingsPath, JSON.stringify(settings, null, 2), 'utf-8');
 
 } catch (error) {
     console.error('Error updating settings.json:', error);
