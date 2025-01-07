@@ -72,9 +72,9 @@ nsis:
   installerHeaderIcon: resources/icons/WindowsLauncherIcon/TheiaIDE.ico
   installerIcon: resources/icons/WindowsLauncherIcon/TheiaIDE.ico
   uninstallerIcon: resources/icons/WindowsLauncherIcon/TheiaIDE.ico
-  installerSidebar: resources/icons/InstallerSidebarImage/164-314Windows.bmp
-  uninstallerSidebar: resources/icons/InstallerSidebarImage/164-314Windows.bmp
-  allowToChangeInstallationDirectory: true
+  installerSidebar: resources/icons/InstallerSidebarImage/installerSidebar.bmp
+  uninstallerSidebar: resources/icons/InstallerSidebarImage/installerSidebar.bmp
+  allowToChangeInstallationDirectory: false
   runAfterFinish: false
   artifactName: ${productName}Setup.${ext}
   license: LICENSE

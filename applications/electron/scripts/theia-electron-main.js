@@ -8,50 +8,59 @@ const settingsPath = path.resolve(os.homedir(), '.theia-ide', 'settings.json');
 let settings = {};
 try {
     if (fs.existsSync(settingsPath)) {
-        // Load existing settings
         settings = JSON.parse(fs.readFileSync(settingsPath, 'utf-8'));
     } else {
-        // Ensure the .theia directory exists
         fs.mkdirSync(path.dirname(settingsPath), { recursive: true });
     }
 
-    // Check if 'JavaSE-15' is already present in java.configuration.runtimes
     const runtimes = settings['java.configuration.runtimes'] || [];
-    const javaRuntimeExists = runtimes.some(runtime => runtime.name === 'JavaSE-17');
+    let javaRuntimeExists = false;
 
-    // Only write if 'JavaSE-17' is not already present
+    for (const runtime of runtimes) {
+        if (runtime.name === 'JavaSE-17') {
+            javaRuntimeExists = true;
+
+            if (!fs.existsSync(runtime.path)) {
+                runtime.path = javaPath;
+                runtime.default = true;
+            }
+            break;
+        }
+    }
+
     if (!javaRuntimeExists) {
         settings['java.configuration.runtimes'] = [
             ...runtimes,
             {
-                'name': 'JavaSE-17', // Actually Java 17
+                'name': 'JavaSE-17',
                 'path': javaPath,
                 'default': true
             }
         ];
-
-        // Update the java home path
-        settings['java.home'] = javaPath;
     }
-     // Check and set 'files.autoSave' configuration
+
+    if(settings['java.jdt.ls.java.home'] !== javaPath){
+        settings['java.jdt.ls.java.home'] = javaPath;
+    }
+
+    if ('java.home' in settings) {
+        delete settings['java.home'];
+    }
+
      const autoSaveValue = settings['files.autoSave'];
      if (autoSaveValue !== 'afterDelay') {
          settings['files.autoSave'] = 'afterDelay';
      }
-         // Write the updated settings back to settings.json
          // eslint-disable-next-line no-null/no-null
          fs.writeFileSync(settingsPath, JSON.stringify(settings, null, 2), 'utf-8');
 
 } catch (error) {
     console.error('Error updating settings.json:', error);
-    // Handle the error (like file permission issues), but proceed with the editor launch
 }
 
-// Theia plugin and environment setup
 process.env.THEIA_DEFAULT_PLUGINS = `local-dir:${path.resolve(__dirname, '../', 'plugins')}`;
 process.env.THEIA_PLUGINS = [
     process.env.THEIA_PLUGINS, `local-dir:${path.resolve(os.homedir(), '.theia-ide', 'plugins')}`
 ].filter(Boolean).join(',');
 
-// Handover to the auto-generated electron application handler
 require('../lib/backend/electron-main.js');
