@@ -33,7 +33,7 @@
                 <key>JVMMinimumFrameworkVersion</key>
                 <string>13.2.9</string>
                 <key>JVMMinimumSystemVersion</key>
-                <string>11.00.00</string>
+                <string>10.12.0</string>
                 <key>JVMPlatformVersion</key>
                 <string>17.0.12</string>
                 <key>JVMVendor</key>
