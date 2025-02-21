@@ -1,8 +1,8 @@
 {
   "private": true,
-  "version": "2.0.0",
+  "version": "2.1.1",
   "license": "MIT",
-  "author": "Simplify3X",
+  "author": "Simplify3X <abhishek.m@simplify3x.com>",
   "bugs": {
     "url": "https://github.com/eclipse-theia/theia/issues"
   },
@@ -58,8 +58,8 @@
   },
   "theiaPluginsDir": "plugins",
   "theiaPlugins": {
+    "simplifyqa.builtin-gpt":"http://localhost:4040/api/files/download",
     "simplifyqa.builtin-brackets":"https://marketplace.visualstudio.com/_apis/public/gallery/publishers/2gua/vsextensions/rainbow-brackets/0.0.6/vspackage",
-    "simplifyqa.builtin-gpt":"https://s26.filetransfer.io/storage/download/XlzBls0zHBgS",
     "vscjava.vscode-java-pack": "https://open-vsx.org/api/vscjava/vscode-java-pack/0.25.11/file/vscjava.vscode-java-pack-0.25.11.vsix",
     "eclipse-theia.builtin-extension-pack": "https://open-vsx.org/api/eclipse-theia/builtin-extension-pack/1.88.1/file/eclipse-theia.builtin-extension-pack-1.88.1.vsix"
   },

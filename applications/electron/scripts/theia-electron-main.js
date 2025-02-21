@@ -19,11 +19,8 @@ try {
     for (const runtime of runtimes) {
         if (runtime.name === 'JavaSE-17') {
             javaRuntimeExists = true;
-
-            if (!fs.existsSync(runtime.path)) {
                 runtime.path = javaPath;
                 runtime.default = true;
-            }
             break;
         }
     }

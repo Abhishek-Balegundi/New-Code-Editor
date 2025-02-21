@@ -3,10 +3,10 @@
   "name": "theia-ide-electron-app",
   "description": "Simplify3X product",
   "productName": "SimplifyQA-CodeEditor",
-  "version": "2.0.0",
+  "version": "2.1.1",
   "main": "scripts/theia-electron-main.js",
   "license": "MIT",
-  "author": "Simplify3X <theia-dev@eclipse.org>",
+  "author": "Simplify3X <abhishek.m@simplify3x.com>",
   "bugs": {
     "url": "https://github.com/eclipse-theia/theia/issues"
   },
