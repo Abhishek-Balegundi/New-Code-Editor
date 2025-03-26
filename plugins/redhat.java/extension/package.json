@@ -5,7 +5,7 @@
   "author": "Red Hat",
   "icon": "icons/icon128.png",
   "license": "EPL-2.0",
-  "version": "1.39.2025011008",
+  "version": "1.41.2025032502",
   "publisher": "redhat",
   "bugs": "https://github.com/redhat-developer/vscode-java/issues",
   "preview": false,
@@ -934,7 +934,8 @@
                     "JavaSE-20",
                     "JavaSE-21",
                     "JavaSE-22",
-                    "JavaSE-23"
+                    "JavaSE-23",
+                    "JavaSE-24"
                   ],
                   "description": "Java Execution Environment name. Must be unique."
                 },
@@ -1314,7 +1315,8 @@
                 "tryWithResource",
                 "renameFileToType",
                 "organizeImports",
-                "renameUnusedLocalVariables"
+                "renameUnusedLocalVariables",
+                "useSwitchForInstanceofPattern"
               ]
             },
             "default": [
@@ -1727,7 +1729,11 @@
       },
       {
         "command": "java.change.searchScope",
-        "title": "%java.change.searchScope%",
+        "title": "%java.change.searchScope%"
+      },
+      {
+        "command": "java.action.showExtendedOutline",
+        "title": "%java.action.showExtendedOutline%",
         "category": "Java"
       }
     ],
@@ -1757,6 +1763,11 @@
         "command": "java.action.doCleanup",
         "key": "ctrl+shift+alt+s",
         "when": "javaLSReady && editorLangId == java"
+      },
+      {
+        "command": "java.action.showExtendedOutline",
+        "key": "ctrl+o",
+        "when": "javaLSReady && inQuickOpen"
       }
     ],
     "menus": {
@@ -1951,7 +1962,7 @@
     "lodash.findindex": "^4.6.0",
     "lodash.template": ">=4.5.0",
     "minimist": ">=1.2.6",
-    "mocha": "^9.2.2",
+    "mocha": "^11.1.0",
     "request": "^2.88.2",
     "sinon": "^14.0.0",
     "style-loader": "^3.3.1",

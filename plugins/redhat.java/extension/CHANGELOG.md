@@ -1,5 +1,21 @@
 # Change Log
 
+## 1.40.0 (February 27th, 2025)
+ * enhancement - Support for inherited document symbols. See [#2342](https://github.com/redhat-developer/vscode-java/issues/2342).
+ * enhancement - Introduce approximately 15 new quick fixes. See [JLS#3368](https://github.com/eclipse-jdtls/eclipse.jdt.ls/pull/3368), [JLS#3372](https://github.com/eclipse-jdtls/eclipse.jdt.ls/pull/3372).
+ * enhancement - Introduce quick assist & cleanup converting a pattern-instanceof-if-chain to a switch statement. See [#3951](https://github.com/redhat-developer/vscode-java/pull/3951).
+ * bug fix - Unicode characters not rendering correctly in decompiled file. See [#3949](https://github.com/redhat-developer/vscode-java/issues/3949).
+ * bug fix - Fix a potential deadlock in search-based functionality. See [#3926](https://github.com/redhat-developer/vscode-java/issues/3926).
+ * bug fix - Adopt the Lombok 1.18.36 release. See [#3939](https://github.com/redhat-developer/vscode-java/pull/3939).
+
+## 1.39.0 (January 22nd, 2025)
+ * performance - Enhance initialization of gradle projects. See [JLS#3357](https://github.com/eclipse-jdtls/eclipse.jdt.ls/pull/3357).
+ * enhancement - Implementation code lens for non interface/abstract base types/methods. See [JLS#3355](https://github.com/eclipse-jdtls/eclipse.jdt.ls/pull/3355).
+ * bug fix - Handle snippet position groups with undefined offsets (eg. `Add constructor ..`). See [#3905](https://github.com/redhat-developer/vscode-java/issues/3905).
+ * bug fix - Ensure Gradle project always reacts to build configuration changes. See [#3893](https://github.com/redhat-developer/vscode-java/issues/3893).
+ * bug fix - Update the `javac` build profile with new `--add-opens`. See [#3897](https://github.com/redhat-developer/vscode-java/issues/3897).
+ * debt - Bump minimum required Java Execution Environment from 17 to 21. See [#3911](https://github.com/redhat-developer/vscode-java/pull/3911).
+
 ## 1.38.0 (December 19th, 2024)
  * enhancement - Add code lens for interface / abstract method implementations. See [#3813](https://github.com/redhat-developer/vscode-java/issues/3813).
    * `java.implementationCodeLens.enabled` replaced by `java.implementationCodeLens`

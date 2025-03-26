@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 	<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
 		<Metadata>
-			<Identity Language="en-US" Id="continue" Version="1.0.5" Publisher="Continue" TargetPlatform="darwin-arm64"/>
+			<Identity Language="en-US" Id="continue" Version="0.9.258" Publisher="Continue" TargetPlatform="darwin-arm64"/>
 			<DisplayName>SimplifyQA - AI</DisplayName>
 			<Description xml:space="preserve">The AI code assistant you need.</Description>
 			<Tags>chatgpt,github,copilot,claude,sonnet,mistral,codestral,codegpt,ai,llama,keybindings,json,jsonc</Tags>
